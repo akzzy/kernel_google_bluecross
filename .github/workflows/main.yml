@@ -24,6 +24,6 @@ jobs:
         NAME: neko
       with:
         arch: arm64
-        compiler: aosp-clang/master/clang-r412851
+        compiler: aosp-clang/master/lang-r475365b
         defconfig: b1c1_defconfig
         image: Image.gz-dtb
