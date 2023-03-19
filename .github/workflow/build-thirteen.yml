@@ -1,0 +1,29 @@
+name: build on push tiramisu
+
+on:
+  push:
+    branches: tiramisu
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout kernel source
+      uses: actions/checkout@v2
+
+    - name: Checkout zipper
+      uses: actions/checkout@v2
+      with:
+        repository: akzzy/AnyKernel3
+        path: zipper
+
+    - name: Android kernel build
+      uses: lemniskett/android-kernel-actions@master
+      id: build
+      env:
+        NAME: evox-tiramisu
+      with:
+        arch: arm64
+        compiler: clang/12
+        defconfig: b1c1_defconfig
+        image: Image.gz-dtb
