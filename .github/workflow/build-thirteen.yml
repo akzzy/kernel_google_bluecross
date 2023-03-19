@@ -1,4 +1,4 @@
-name: build on push tiramisu
+name: build on push thirteen
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       uses: lemniskett/android-kernel-actions@master
       id: build
       env:
-        NAME: evox-tiramisu
+        NAME: neko stock
       with:
         arch: arm64
         compiler: clang/12
