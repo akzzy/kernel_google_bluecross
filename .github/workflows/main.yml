@@ -24,6 +24,6 @@ jobs:
         NAME: neko
       with:
         arch: arm64
-        compiler: clang/12
+        compiler: gcc/12
         defconfig: b1c1_defconfig
         image: Image.gz-dtb
