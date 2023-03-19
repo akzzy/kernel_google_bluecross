@@ -2,7 +2,7 @@ name: build on push tiramisu
 
 on:
   push:
-    branches: tiramisu
+    branches: thirteen
 
 jobs:
   build:
